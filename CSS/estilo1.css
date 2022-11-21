@@ -1,0 +1,27 @@
+ul{
+
+   list-style-type: none;  /* Elimina los botones de las litas*/
+   background-color: #457b9d;/*Configgura el background gllobal no seguroo*/
+   overflow: hidden;/*Muestra la lista de manera independiente salto de linea algo asi*/
+   margin:0;
+   padding: 0;
+}
+
+li{
+
+float:left;/*Le dice uqe la lista siga hacia la izquierda*/
+
+
+}
+li a{
+display: block;
+color:white;
+text-align: center;
+padding: 20px;/*Tambien cambia el enfoque del bacgrounnd*/
+text-decoration: none;
+
+}
+
+li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
+    background-color: #1d3557;
+}
