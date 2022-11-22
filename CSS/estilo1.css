@@ -1,7 +1,7 @@
 ul{
 
    list-style-type: none;  /* Elimina los botones de las litas*/
-   background-color: #457b9d;/*Configgura el background gllobal no seguroo*/
+   background-color: #0367A6;/*Configgura el background global no seguroo*/
    overflow: hidden;/*Muestra la lista de manera independiente salto de linea algo asi*/
    margin:0;
    padding: 0;
@@ -13,7 +13,9 @@ float:left;/*Le dice uqe la lista siga hacia la izquierda*/
 
 
 }
-
+body{
+  margin: 0px;
+}
 
 li a{
 display: block;
@@ -25,14 +27,15 @@ text-decoration: none;
 }
 
 li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
-    background-color: #1d3557;
+    background-color: #084A59;
 }
 
 
 .header_waeter{
     display:flex;/*pone el horizontal los div*/
     justify-content: space-around;/*Centra los div absolutos y no absulutos*/
-  
+    background-color:#084A59;
+    height: 50 px;
 }
 
 
@@ -40,7 +43,12 @@ li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
     position: absolute;
     padding-right: 200px;
   }
-  
+.header.picture {
+height:80px;
+
+}
+
+
 .header_buscar input {
     width: 0px;
     height: 40px;
@@ -60,7 +68,7 @@ li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
     position: absolute;
     top: 0;
     left: -10px;
-    background: #440088;
+    background:#049DBF;
     width: 55px;
     height: 55px;
     line-height: 55px;
