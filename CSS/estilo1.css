@@ -13,6 +13,8 @@ float:left;/*Le dice uqe la lista siga hacia la izquierda*/
 
 
 }
+
+
 li a{
 display: block;
 color:white;
@@ -25,3 +27,55 @@ text-decoration: none;
 li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
     background-color: #1d3557;
 }
+
+
+.header_waeter{
+    display:flex;/*pone el horizontal los div*/
+    justify-content: space-around;/*Centra los div absolutos y no absulutos*/
+  
+}
+
+
+.header_buscar {/*Declara un class*/
+    position: absolute;
+    padding-right: 200px;
+  }
+  
+.header_buscar input {
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    text-align: left;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.8s ease;
+    
+
+  }
+  
+.btn {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: #440088;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+.header_buscar:hover input {
+    width: 240px;
+  }
+  
+.header_buscar input:focus {
+    width: 240px;
+  }
+  
