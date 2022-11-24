@@ -19,6 +19,11 @@ body{
  
 }
 
+h5{
+  margin: 0px;
+  position: relative; 
+  top: -35px; left: 60px;
+}
 li a{
 display: block;
 color:white;
@@ -77,8 +82,8 @@ li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
   
 .btn {
     position: absolute;
-    top: 0;
-    left: -10px;
+    top: -5px;
+    left: -13px;
     background:#049DBF;
     width: 55px;
     height: 55px;
@@ -140,7 +145,7 @@ li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
 } 
 .contenedor header{
 	padding: 10px;
-	background: #db8046;
+	background: #049DBF;
 	color: #fff;
 }
 .contenedor label{
@@ -167,10 +172,11 @@ li a:hover{/*Cuando el curso pasa ensombrece con el color designado*/
   display:none;
 }
 .lbl-modal{
-	
-	padding: 10px 15px;
+	color: white;
+	padding: 0px;
 	border-radius: 4px;
 	cursor: pointer;
+
 }
 @media only screen and (min-width:320px) and (max-width:768px){
 	.contenedor{

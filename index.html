@@ -27,7 +27,7 @@ referrerpolicy="no-referrer"
     <div class="header_waeter">
         <div class="header_picture">
             <figure id="zorrito"> <img src="./imagenes/images.jpg" alt="Logo_zorritos"  width="80" height="80">
-                   <figcaption>Licoreria Zorritos</figcaption>
+                   <figcaption style="color:aliceblue">Licoreria Zorritos</figcaption>
                 </figure>
         </div>
         <div class="header_buscar">
@@ -41,13 +41,23 @@ referrerpolicy="no-referrer"
             <input type="checkbox" id="btn-modal">
            <label for="btn-modal" class="lbl-modal">
             <img src="./imagenes/login.png"  alt="Inicio de sesión" >
-            </label>
+            <h5>Iniciar sesion</h5></label>
             <div class="modal"> 
             <div class="contenedor">
-                <header>Iniciar sesion</header>
-                <label for="btn-modal">X</label>
+                <header>Iniciar sesion </header>
+                <label for ="btn-modal">X</label>
                 <div class="contenido">
+                    <form >
+                    <input type="text" id =" Email_Address" name ="Email_Address" placeholder= "Correo Electronico"
+                    required="true"/>
+                    <input type ="text" id="Password" name="Password" placeholder= "Contraseña"
+                    required="true"/>
+                    <br/>
+                    <br/>
                     
+                    <input type= "submit" value="Iniciar sesion" formnovalidate/>
+                    <input type= "submit" value="Crear Nueva Cuenta"/>
+                    </form>           
                 </div>
             </div>
               </div>
@@ -62,8 +72,8 @@ referrerpolicy="no-referrer"
     </div>
     <nav >
         <ul>
+            <li><a href="Categoria.html">Categorias</a></li>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="Categoria.html">Categoria</a></li>
             <li><a href ="Nosotros">Nosotros</a> </li>
             <li><a href ="  ">Ayuda</a></li>
             <li><a href ="  ">Contactenos</a></li>
