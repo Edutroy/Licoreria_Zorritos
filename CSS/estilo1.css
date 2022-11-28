@@ -208,3 +208,82 @@ color:#fff;
 cursor:pointer;
 }
 /*Esto para el inicio de sesion*/
+/*Pie de Página*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+.Pie_página{
+  background-color: #084A59;
+  position: fixed;
+  bottom: 0;  
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.span{
+  font-size: 23px;
+}
+.fb{
+  background-color: blue;
+  padding: 0;
+  border-radius: 30px;
+  color: white;
+}
+.in{
+  background-color: rgb(255, 0, 136);
+  border-radius: 30px;
+  padding: 0;  
+  color: white;
+}
+.logotipo{
+  font-size: 18px;
+  color: white;
+}
+.Redes-sociales span{ 
+  display: inline-flex;
+  justify-content: space-evenly;
+  padding: 5px;
+}
+.Pie_página .grupo-1{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: auto;
+  grid-gap: 50px;
+  align-items: initial;
+}
+a{
+  color: white;
+  text-decoration: none;
+  
+}
+.Ayuda a{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+}
+.Contactos a{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+}
+.Información a{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 10px;
+}
+.grupo-2{
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background: #0367A6;
+  padding: 10px;
+}
+
