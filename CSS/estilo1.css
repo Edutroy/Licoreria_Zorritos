@@ -225,6 +225,9 @@ cursor:pointer;
   align-items: center;
   gap: 10px;
 }
+.logo img{
+  width: 100px;
+}
 .span{
   font-size: 23px;
 }
