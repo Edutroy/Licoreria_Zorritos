@@ -268,19 +268,19 @@ a{
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 10px;
+  padding: 1px;
 }
 .Contactos a{
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 10px;
+  padding: 1px;
 }
 .Información a{
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  padding: 10px;
+  padding: 1px;
 }
 .grupo-2{
   color: white;
