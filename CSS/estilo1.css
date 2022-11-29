@@ -256,7 +256,7 @@ cursor:pointer;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   margin: auto;
-  grid-gap: 50px;
+  grid-gap: 100px;
   align-items: initial;
 }
 a{
