@@ -1,16 +1,19 @@
 const express = require('express');
-const Router =express.Router();
+const router =express.Router();
 
-const conexion = require ('./database/db');
+const conexion = require('./database/db');
 
-Router.get('/', (req,res)=>{
-    conexion.query('SELECT* FROM usuarios',(error,results)=>{
+router.get('/', (req,res)=>{
+
+    
+     conexion.query('SELECT * FROM usuarios',(error, results)=>{
         if(error){
-            throw error;}
-            else{
-                res.send(results);
+            throw error;
+        } else{
+                res.render('index.ejs',{results: results});
             }
         
-    })
+    })  
 })
-module.exports=Router;
+
+module.exports=router;
