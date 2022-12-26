@@ -1,80 +1,178 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>Administrador</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
+ <!DOCTYPE html>
+<html lang ="eng" >
+<head>
+<meta charset= "UTF-8">
+<meta name="description" content="Adquire los licores mas finos de todo huancayo/n
+                                    o convierte en nuestro distribuidor">
+<link rel="stylesheet"  href="CSS/estilo1.css" type="text/css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+                                    />
+<title> Licoreria Zorrito</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+<body>  
+<header>
+    <div class="header_waeter">
+        <div class="header_picture">
+            <figure id="zorrito"> <img src="imagenes/images.jpg" alt="Logo_zorritos"  width="80" height="80">
+                   <figcaption style="color:aliceblue">Licoreria Zorrito</figcaption>
+                </figure>
+               
         </div>
-      </nav>
-      <div class="container">
-        <a href="/create" class="btn btn-outline-primary mt-4"><i class='bx bxs-plus-circle'></i></a>
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr class="bg-primary text while">
-                <th scope="col">ID</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Apellido</th>
-                <th scope="col">telefono</th>
-                <th scope="col">DNI</th>
-                <th scope="col">correo</th>
-                <th scope="col">contraseña</th>
-                <th scope="col">rol</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% results.forEach((usuarios)=>{ %>
-                <tr>
-                    <td><%= usuarios.ID_user %></td>
-                    <td><%= usuarios.nombre_user %></td>
-                    <td><%= usuarios.apellido_user %></td>
-                    <td><%= usuarios.telefono_user %></td>
-                    <td><%= usuarios.DNI_user %></td>
-                    <td><%= usuarios.correo_user %></td>
-                    <td><%= usuarios.contraseña_user %></td>
-                    <td><%= usuarios.rol %></td>
-                    <td>
-                        <a href="/edit" class="btn-btn outline-info">Editar</a>
-                        <a href="/delete" class="btn-btn outline-info">Eliminar</a>
-                    </td>
-                </tr>
-                <%  }) %>
+        <div class="header_buscar">
+            <input type="text" placeholder="    Buscar" required />
+            <div class="btn">
+                <i class="fas fa-search icon"></i>
+            </div>
+        </div>
+        <div class="header_sesion">
+            
+            <input type="checkbox" id="btn-modal">
+           <label for="btn-modal" class="lbl-modal">
+            <img src="./imagenes/login.png"  alt="Inicio de sesión" >
+            <h5>Iniciar sesion</h5></label>
+            <div class="modal"> 
+            <div class="contenedor">
+                <header>Iniciar sesion </header>
+                <label for ="btn-modal">X</label>
+                <div class="contenido">
+                    <form  action="/authenticate" method="POST">
+                    <div class="Elemento">
+                        <input type="text" id =" Email_Address" name ="Email_Address" placeholder= "Correo Electronico"
+                        />
+                    </div>
 
-            </tbody>
-        </table>
-    </div >
+                    <div class="Elemento">
+                        <input type ="password" id="Password" name="Password" placeholder= "Contraseña"
+                        />
+                    </div>
+                  
+                    <div class="Boton">
+                        <input  type= "submit" value="Enviar" />
+                    </div>
+                        </form> 
+                    <div class="Boton_2" >
+                        <input type= "checkbox"  id ="btn-modal_2"/>
+                        <label for="btn-modal_2" class="lbl-modal_2" >
+                            <h5>Crear Nueva Cuenta</h5></label>
+                        <div class="modal_2">    
+                        <div class="contenedor_register">
+                            <header>Registrarse </header>
+                            <label for ="btn-modal_2">X</label>
+                            <div class="contenido_register">
+                            <form action="/save" method="POST" >
+                                <div class="Elemento">
+                                    <input class ="form-control" type="text" id =" Nombre_user" name ="Nombre_user" placeholder= "Nombre"
+                                    />
+                                </div>
+                                
+                                <div class="Elemento">
+                                    <input type="text" class ="form-control" id =" Apellido_user" name ="Apellido_user" placeholder= "Apellido "
+                                    />
+                                </div>
+            
+                                <div class="Elemento">
+                                    <input type="text" class ="form-control" id =" telefono_user" name ="telefono_user" placeholder= "Número telefonico"
+                                    />
+                                </div>
+            
+                                <div class="Elemento">
+                                    <input type="text" class ="form-control" id =" DNI_user" name ="DNI_user" placeholder= "DNI"
+                                    />
+                                </div>
+                                
+                                <div class="Elemento">
+                                    <input type="text" class ="form-control" id =" correo_user" name ="correo_user" placeholder= "Direccion "
+                                    />
+                                </div>
+            
+                                <div class="Elemento">
+                                    <input type ="password" class ="form-control" id="contraseña_user" name="contraseña_user" placeholder= "Contraseña"
+                                    />
+                                </div>
+                              
+                                       <button input  type= "submit"  >Guardar</button>
+                                
+                            </form>           
+                            </div>
+            
+                            
+                        </div>
+                    </div>
+                </div>
+                         
+                </div>
+            </div>
+           
+            </div>
+            
+        </div>   
+        <div class="header_carrito">
+            <figure>
+            <img src="./imagenes/icons8-carrito-de-la-compra-cargado-48.png" alt="Carrito de compras" >
+        </figure>
+        </div>
+    </div>
+    <nav >
+        <ul>
+            <li><a href="Categoria.html">Categorias</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href ="Nosotros">Nosotros</a> </li>
+            <li><a href ="  ">Ayuda</a></li>
+            <li><a href ="  ">Contactenos</a></li>
 
-
-      <h1><i class='bx bxs-customize'></i></h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  
+        </ul>
+    </nav>
+</header>
+<main>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+<br/><br/><br/>
+</main>
 </body>
-</html>
-
+<footer class="Pie_página">
+    <div class="grupo-1">
+        <div class="logo">
+            <figure>
+                <a href="#">
+                    <img src="./imagenes/images.jpg" alt="Logo Zorrito">                
+                </a>
+            </figure>
+            <p class="logotipo">Licorería Zorrito</p>            
+        </div>
+        <div class="Redes-sociales">
+            <h4>Síguenos</h4>
+            <span class="fb"><i class="fa-brands fa-facebook"></i></span>
+            <span class="in"><i class="fa-brands fa-instagram"></i></span>
+        </div>  
+        <div class="Información">
+            <h4>Nosotros</h4>
+                <a href="">Historia de la Licorería Zorrito</a>
+        </div>
+        <div class="Ayuda">
+            <h4>Tienda Online</h4>
+                <a href="#">Cómo comprar</a>
+                <a href="#">Mis pedidos</a>
+                <a href="#">Medios de pago</a>
+                <a href="#">Preguntas frecuentes</a>
+                <a href="#">Términos y condiciones</a>
+        </div>
+        <div class="Contactos">
+            <h4>Contáctanos</h4>
+                <a href="">Teléfonos</a>
+                <a href="">Revisa tu boleta</a>
+        </div>
+    </div>
+    <hr>
+    <div class="grupo-2">
+        <small>&copy; 2022 <b>*****</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+</html> 
