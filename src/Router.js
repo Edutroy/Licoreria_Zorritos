@@ -4,10 +4,10 @@ const conexion = require('./database/db');
 const crud = require('./controller/crud.js');
 
 //Ruta para crear registro de usuarios
-router.get('/', (req,res)=>{
+ /* router.get('/', (req,res)=>{
     res.render('index');
-})
-
+}) 
+ */
 
 //Muestra los registros de usuarios
 router.get('/admin', (req,res)=>{
@@ -35,6 +35,7 @@ router.get('/edit/:ID_user', (req,res)=>{
         }        
     });
 });
+//Ruta para verificar
 
 //Ruta para eliminar registros
 router.get('/delete/:ID_user', (req, res) => {
@@ -43,12 +44,14 @@ router.get('/delete/:ID_user', (req, res) => {
         if(error){
             throw error;
         }else{           
-            res.redirect('admin.ejs');         
-        }
+              
+        res.redirect('/admin');
+        } 
     })
 });
 
 router.post('/save', crud.save);
 router.post('/update', crud.update);
+//router.post('/authenticate',crud.authenticate);
 
 module.exports=router;
