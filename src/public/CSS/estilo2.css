@@ -239,22 +239,6 @@ cursor:pointer;
 .btn-login:focus{
   box-shadow:0 0 0 3px rgba(121,82,179,0.25)
 }
-/* Estilos de link para realizar el LOGOUT*/
-.a-logout:link, .a-logout:visited {
-  background-color: white;
-  color: black;
-  border: 2px solid #F87171;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.a-logout:hover, .a-logout:active {
-  background-color: #F87171;
-  color: white;
-}
-/* Estilos de link para realizar el LOGOUT*/
 
 /* Estilos boton REGISTER*/
 .btn-register{
@@ -277,7 +261,22 @@ cursor:pointer;
 
   
 /*Esto para el inicio de sesion*/
+/* Estilos de link para realizar el LOGOUT*/
+.a-logout:link, .a-logout:visited {
+  background-color: white;
+  color: black;
+  border: 2px solid #F87171;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
 
+.a-logout:hover, .a-logout:active {
+  background-color: #F87171;
+  color: white;
+}
+/* Estilos de link para realizar el LOGOUT*/
 /*Esto para el registro de sesion*/
 .modal_2{
 	position: fixed;

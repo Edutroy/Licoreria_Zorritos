@@ -35,7 +35,7 @@ referrerpolicy="no-referrer"
             
             <input type="checkbox" id="btn-modal">
            <label for="btn-modal" class="lbl-modal">
-            <img src="./imagenes/login.png"  alt="Inicio de sesión" >
+            <a class="logear" href="login"  ><img src="./imagenes/login.png"  alt="Iniciar sesion"/>Inice sesion</a>
             <h5>Iniciar sesion</h5></label>
             <div class="modal"> 
             <div class="contenedor">
@@ -54,7 +54,7 @@ referrerpolicy="no-referrer"
                     </div>
                   
                     <div class="Boton">
-                        <input  type= "submit" hclass="btn-login" value="Enviar" />
+                        <button type= "submit" class="btn-login">Enviar</button>
                          <!-- <a href="test"></a> -->
                     </div>
                         </form> 
@@ -113,7 +113,7 @@ referrerpolicy="no-referrer"
                                     />
                                 </div>
                               
-                                       <button input  type= "submit" class="btn-register" >Guardar</button>
+                                       <button   type= "submit" class="btn-register" >Guardar</button>
                                 
                             </form>           
                             </div>
@@ -142,7 +142,12 @@ referrerpolicy="no-referrer"
             
         </div>
         <div class="header_user">
-          
+            <% if (login) { %>                
+                <h4 style="color:white">¡ Bienvenid@  <strong><%= name %> !</strong></h4> 
+                <a href="logout" class="a-logout">Logout</a>                       
+            <%} else { %>
+                <h4>Desconocido</h4>   
+                <% } %>
         </div>   
         <div class="header_carrito">
             <figure>
