@@ -10,9 +10,9 @@ app.use(express.json());
 	res.render('login');
 })    
 
-app.get('/admin',(req, res)=>{// es importante colocar el slah al momento de trazar una ruta
-	res.render('admin');
-})
+app.get('/admin_sales',(req, res)=>{// es importante colocar el slah al momento de trazar una ruta
+	res.render('admin_sales');
+}) 
 const conexion = require('./database/db');
 app.use('/', require('./router'));
 //invocar a dotenv
@@ -49,10 +49,10 @@ app.post('/authenticate', async (req, res)=> {
 				
 				//Mensaje simple y poco vistoso
                 //res.send('Incorrect Username and/or Password!');				
-			}if(correo_user=='admin' && contraseña_user=='admin'){
+			}/* if(correo_user=='admin' && contraseña_user=='admin'){
 				console.log(correo_user +'&'+ contraseña_user);
 				window.open('admin');
-			} else {         
+			} */ else {         
 				//creamos una var de session y le asignamos true si INICIO SESSION       
 				req.session.loggedin = true;                
 				req.session.Nombre_user = results[0].nombre_user;

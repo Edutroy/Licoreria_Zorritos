@@ -35,7 +35,7 @@ router.get('/edit/:ID_user', (req,res)=>{
         }        
     });
 });
-//Ruta para verificar
+
 
 //Ruta para eliminar registros
 router.get('/delete/:ID_user', (req, res) => {
@@ -53,5 +53,49 @@ router.get('/delete/:ID_user', (req, res) => {
 router.post('/save', crud.save);
 router.post('/update', crud.update);
 //router.post('/authenticate',crud.authenticate);
+
+
+//GESTION DE PRODUCTOS
+
+//Muestra los registros de usuarios
+router.get('/admin_products', (req,res)=>{
+    conexion.query('SELECT * FROM productos',(error, results)=>{
+       if(error){
+           throw error;
+       } else{
+               res.render('admin_products.ejs',{results: results});
+           }
+       
+   })  
+});
+
+//Ruta para editar registros_productos
+
+router.get('/edit_products/:ID_producto', (req,res)=>{    
+    const ID_producto = req.params.ID_producto;
+    conexion.query('SELECT * FROM productos WHERE ID_producto=?',[ID_producto] , (error, results) => {
+        if (error) {
+            throw error;
+        }else{            
+            res.render('edit_products', {productos:results[0]});   
+                    
+        }        
+    });
+});
+
+
+//Ruta para eliminar registros
+router.get('/delete/:ID_producto', (req, res) => {
+    const ID_producto = req.params.ID_producto;
+    conexion.query('DELETE FROM productos WHERE ID_producto = ?',[ID_producto], (error, results)=>{
+        if(error){
+            throw error;
+        }else{           
+              
+        res.redirect('/admin_products');
+        } 
+    })
+});
+
 
 module.exports=router;

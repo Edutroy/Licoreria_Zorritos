@@ -144,9 +144,10 @@ referrerpolicy="no-referrer"
         <div class="header_user">
             <% if (login) { %>                
                 <h4 style="color:white">¡ Bienvenid@  <strong><%= name %> !</strong></h4> 
-                <a href="logout" class="a-logout">Logout</a>                       
+                <a href="logout" class="a-logout">Logout</a>   
+                                
             <%} else { %>
-                <h4>Desconocido</h4>   
+                <h4 style="color:white">Desconocido</h4>   
                 <% } %>
         </div>   
         <div class="header_carrito">
@@ -168,17 +169,26 @@ referrerpolicy="no-referrer"
 </header>
 <main>
 <br/><br/><br/><br/>
-<div class="main">
-    <div class="Producto">
+<div class="page-content">
+    <div class="product product-container" >
         <h4>Borgoña</h4>
-        <img source="imagenes/Borgoña.jpg">
+        <img src="imagenes/Borgoña.jpg" width="40px" height="180px" />
+        <h3>S/.19.00</h3>
+        <button class="button-add" onclick="">Agregar</button>
+    </div>
+    <div class="product-container">
+        <h4>Mistela</h4>
+        <img src="imagenes/MISTELA.jpg"width="40px" height="180px" />
         <h3>S/.25.00</h3>
+        <button class="button-add" onclick="">Agregar</button>
     </div>
-    <div class="Producto">
-        <h4>Montalvo</h4>
-        <img source="imagenes/Borg.jpg">
-        <h3>S/.30.00</h3>
+    <div class="product-container">
+        <h4>nombre</h4>
+        <img src="imagenes/monster.PNG" width="40px" height="180px" />
+        <h3>S/. 8.00</h3>
+        <button class="button-add" onclick="">Agregar</button>
     </div>
+
 </div>
 <br/><br/><br/><br/>
 </main>
