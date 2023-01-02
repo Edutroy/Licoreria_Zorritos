@@ -29,7 +29,7 @@
           <div class="card border-secondary">  
                 <div class="card-header">Editar Producto</div>
                 <div class="card-body">
-                    <form action="/update" method="POST">
+                    <form action="/update_products" method="POST">
                          <input id="ID_producto" name="ID_producto" value="<%= productos.ID_producto%>" hidden>
                 
                         <div class="mb-3">
@@ -64,7 +64,7 @@
                                                   
                         </div>                                                              
                         <button type="submit" class="btn btn-primary" >Guardar</button>
-                        <a href="/" class="btn btn-secondary">Cancelar</a>
+                        <a href="/admin_products" class="btn btn-secondary">Cancelar</a>
                     </form>      
                 </div>
             </div>     

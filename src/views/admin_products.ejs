@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    <link rel="stylesheet"  href="CSS/estilo_product_admin.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -40,8 +40,60 @@
           </div>
         </div>
       </nav>
+      <div class="header_">               
+        <input type= "checkbox"  id ="btn-modal_p"/>
+                <label for="btn-modal_p" class="lbl-modal_p" >
+                    <img src="./imagenes/icons8-carrito-de-la-compra-cargado-48.png"  alt="Carrito de compras"/>
+                    </label>
+                <div class="modal_p">    
+                <div class="contenedor_producto">
+                  <header>Registrar producto</header>
+                    <label for ="btn-modal_p">X</label>
+                    <div class="contenido_producto">
+                      <form action='/save_product' method='POST'>
+                      <div class="Elemento">
+                        <input class ="form-control" type="text" id =" Nombre_producto" name ="Nombre_producto" placeholder= "Nombre"
+                        />
+                    </div>
+                    
+                    <div class="Elemento">
+                        <input type="text" class ="form-control" id =" codigo_producto" name ="codigo_producto" placeholder= "codigo_producto"
+                        />
+                    </div>
+
+                    <div class="Elemento">
+                        <input type="text" class ="form-control" id =" proovedor" name ="proovedor" placeholder= "proovedor"
+                        />
+                    </div>
+
+                    <div class="Elemento">
+                        <input type="text" class ="form-control" id =" precio" name ="precio" placeholder= "precio"
+                        />
+                    </div>
+                    
+                    <div class="Elemento">
+                        <input type="text" class ="form-control" id =" stock" name ="stock" placeholder= "stock "
+                        />
+                    </div>
+
+                    <div class="Elemento">
+                        <input type ="text" class ="form-control" id="photo_producto" name="photo_producto" placeholder= "url producto"
+                        />
+                    </div>
+                  
+                           <button   type= "submit" class="btn-registrar" >Guardar</button>
+                       </form>
+                       <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                       
+                   
+                    </div>
+                   
+                </div>
+            </div>   
+      </div>
+
       <div class="container">
-        <a href="/create" class="btn btn-outline-primary mt-4"><i class='bx bxs-plus-circle bx-md'></i></i></a>
+        
         <table class="table table-bordered table-striped text-center mt-4">
             <thead>
                 <tr class="bg-primary text while">

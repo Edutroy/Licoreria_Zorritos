@@ -8,11 +8,11 @@ app.use(express.json());
 
  app.get('/login',(req, res)=>{// es importante colocar el slah al momento de trazar una ruta
 	res.render('login');
-})    
+});   
 
 app.get('/admin_sales',(req, res)=>{// es importante colocar el slah al momento de trazar una ruta
 	res.render('admin_sales');
-}) 
+}); 
 const conexion = require('./database/db');
 app.use('/', require('./router'));
 //invocar a dotenv
@@ -27,7 +27,8 @@ const session =require('express-session');
 app.use(session({
     secret:'12345678',
     resave:true,
-    saveUninitialized:true
+    saveUninitialized:true,
+	
 }));
 
 //metodo de autenticacion
@@ -90,7 +91,8 @@ app.post('/authenticate', async (req, res)=> {
 //12-Auth pages
 app.get('/', (req, res)=> {
 	if (req.session.loggedin) {
-		res.render('index',{
+	
+		return res.render('index',{
 			login:true,
 			name: req.session.Nombre_user,
 		 		
@@ -101,14 +103,26 @@ app.get('/', (req, res)=> {
 			name:'Debe iniciar sesión',			
 		});				
 	}
-	res.end();
+	
+/* 	conexion.query('SELECT * FROM productos',(error, results)=>{
+		if(error){
+			console.log("Hello, this is error ==>")
+			throw error;
+		} else{
+			return res.render('index',{results: results});
+			}
+		
+	});  */
+	return res.end();
+
+
 });
 //función para limpiar la caché luego del logout
-/* app.use(function(req, res, next) {
+ app.use(function(req, res, next) {
     if (!req.usuarios)
         res.header('Cache-Control', 'private, no-cache, no-store, must-revalidate');
     next();
-}); */
+}); 
 
  //Logout
 //Destruye la sesión.

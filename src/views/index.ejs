@@ -150,10 +150,22 @@ referrerpolicy="no-referrer"
                 <h4 style="color:white">Desconocido</h4>   
                 <% } %>
         </div>   
-        <div class="header_carrito">
-            <figure>
-            <img src="./imagenes/icons8-carrito-de-la-compra-cargado-48.png" alt="Carrito de compras" >
-        </figure>
+        <div class="header_carrito">               
+                <input type= "checkbox"  id ="btn-modal_3"/>
+                        <label for="btn-modal_3" class="lbl-modal_3" >
+                            <img src="./imagenes/icons8-carrito-de-la-compra-cargado-48.png"  alt="Carrito de compras"/>
+                            </label>
+                        <div class="modal_3">    
+                        <div class="contenedor_carrito">
+                            <label for ="btn-modal_3">X</label>
+                            <div class="contenido_carrito">
+                                
+                           <h4>AQUI VAN LOS PRODUCTOS</h4>  
+                           
+                            </div>
+                           
+                        </div>
+                    </div>   
         </div>
     </div>
     <nav >
@@ -172,19 +184,24 @@ referrerpolicy="no-referrer"
 <div class="page-content">
     <div class="product product-container" >
         <h4>Borgoña</h4>
-        <img src="imagenes/Borgoña.jpg" width="40px" height="180px" />
+        <img src="imagenes/Borgoña.jpg" >
         <h3>S/.19.00</h3>
         <button class="button-add" onclick="">Agregar</button>
+        <script>
+            $('like').click(function(){
+                $.post('/test')
+            });
+        </script>
     </div>
     <div class="product-container">
         <h4>Mistela</h4>
-        <img src="imagenes/MISTELA.jpg"width="40px" height="180px" />
+        <img src="imagenes/MISTELA.jpg">
         <h3>S/.25.00</h3>
         <button class="button-add" onclick="">Agregar</button>
     </div>
     <div class="product-container">
         <h4>nombre</h4>
-        <img src="imagenes/monster.PNG" width="40px" height="180px" />
+        <img src="imagenes/monster.PNG" />
         <h3>S/. 8.00</h3>
         <button class="button-add" onclick="">Agregar</button>
     </div>
